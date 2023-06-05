@@ -18,7 +18,7 @@ const ChatLogMessage: FC<ChatLogMessageProps> = ({ avatarUrl, content }) => {
 export default function SupportView() {
   return (
     <main className="main text-white">
-      <div className="mx-auto container-md d-flex py-4">
+      <div className="mx-auto container-md d-flex p-0 gap-4">
         <SideBar />
 
         <div className="support-chat-container mx-auto">
