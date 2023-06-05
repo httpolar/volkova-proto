@@ -1,0 +1,197 @@
+:root {
+    --header-height: 80px;
+    --vh-100-minus-header: calc(100vh - var(--header-height));
+    --bg-default-color: #121E2E;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.bg-default {
+    background-color: var(--bg-default-color);
+}
+
+.root {
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "main   main"
+    "footer footer";
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr auto;
+}
+
+.header {
+    grid-area: header;
+    height: var(--header-height);
+}
+
+.header-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    font-weight: bold;
+    align-items: center;
+}
+
+.header-buttons .header-link {
+    text-decoration: none;
+    color: white;
+    opacity: 1;
+    transition: all 100ms ease-in;
+}
+
+.header-buttons .header-link:hover {
+    opacity: 0.8;
+}
+
+.header-buttons .sign-out-btn {
+    padding: 1rem 2rem;
+    background-color: rgba(122, 119, 119, 0.2);
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    border-style: none;
+    border-width: 0;
+}
+
+.logo {
+    font-family: 'Days One', sans-serif;
+}
+
+.logo-short {
+    color: #EE6D52;
+}
+
+.logo-full {
+    color: white;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.sidebar-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: white;
+}
+
+.sidebar-link.active {
+    border-radius: 9999px;
+    background-color: #4775B1;
+    box-shadow: 0 15px 30px rgba(71, 107, 234, 0.25);
+}
+
+.main {
+    grid-area: main;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    min-height: var(--vh-100-minus-header);
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.footer {
+    min-height: 200px;
+    display: flex;
+    flex-direction: row;
+}
+
+.footer .socials {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-auto-flow: column dense;
+    grid-auto-columns: auto;
+    gap: 2rem;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.support-chat-container {
+    max-width: 900px;
+    margin-right: auto;
+    background-color: rgba(47, 55, 75, 0.25);
+    padding: 2rem;
+    border-radius: 12px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.support-chat-info {
+    font-family: 'Days One', 'Roboto', sans-serif;
+}
+
+.support-chat-info :is(h1, h2, h3, h4, h5, h6) {
+    font-weight: bold;
+}
+
+.support-chat-info span {
+    color: #78778B;
+}
+
+.support-chat-log {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    gap: 2rem;
+}
+
+.support-chat-log .message {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.support-chat-log .message:nth-child(even) {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.support-chat-log .message img {
+    flex-shrink: 0;
+    height: 4rem;
+    width: 4rem;
+    object-fit: cover;
+    border-radius: 9999px;
+}
+
+.support-chat-input-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.support-chat-input-group input {
+    width: 100%;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    background: transparent;
+    color: white;
+    border-style: solid;
+    border-width: 2px;
+}
+
+.support-chat-input-group button {
+    background-color: #FAB33F;
+    border-radius: 8px;
+    border-style: none;
+    border-width: 0;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    color: white;
+}
