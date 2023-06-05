@@ -78,7 +78,6 @@ html {
     color: white;
     gap: 1rem;
     overflow-x: auto;
-    justify-content: space-evenly;
     flex-grow: 1;
 }
 
