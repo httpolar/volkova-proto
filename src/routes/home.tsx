@@ -26,10 +26,12 @@ export default function HomeView() {
           style={{ height: "calc(100vh - var(--header-height))" }}
           className="text-white d-flex flex-column justify-content-center align-items-center"
         >
-          <h1 style={{ fontSize: "3.5rem" }} className="fw-bold">
+          <h1 style={{ fontSize: "3.5rem" }} className="fw-bold text-center">
             Найди жильё с комфортом
           </h1>
-          <p style={{ color: "#5C6272" }}>Сделайте вашу поездку незабываемой</p>
+          <p style={{ color: "#5C6272" }} className="text-center">
+            Сделайте вашу поездку незабываемой
+          </p>
 
           <form className="home-search-form mt-4">
             <div className="home-search-form-input-group">
@@ -180,10 +182,10 @@ export default function HomeView() {
               <h5>Узнавай обо всем первый</h5>
               <p>Подпишитесь, и мы вышлем вам лучшие предложения</p>
             </div>
-            <div/>
+            <div />
             <div className="input-container">
               <div className="input-group">
-                <input placeholder="Укажите e-mail" type="text"/>
+                <input placeholder="Укажите e-mail" type="text" />
                 <button>Подписаться</button>
               </div>
             </div>

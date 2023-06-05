@@ -16,29 +16,107 @@ html {
 .root {
     display: grid;
     grid-template-areas:
-    "header header"
     "main   main"
     "footer footer";
     grid-template-columns: auto 1fr;
     grid-template-rows: auto 1fr auto;
 }
 
+@media (min-width: 1200px) {
+    .root {
+        grid-template-areas:
+            "nav    nav"
+            "main   main"
+            "footer footer";
+    }
+
+}
+
+.desktop-hide {}
+
+@media (min-width: 1200px) {
+    .desktop-hide {
+        display: none !important;
+    }
+}
+
+.mobile-hide {
+    display: none;
+}
+
+@media (min-width: 1200px) {
+    .mobile-hide {
+        display: inherit;
+    }
+}
+
 .header {
-    grid-area: header;
     height: var(--header-height);
     position: sticky;
     z-index: 50;
-    top: 0;
+    bottom: 0;
+    width: 100vw;
     background-color: rgba(18, 30, 46, 0.8);
     backdrop-filter: blur(10px);
 }
 
-.header-buttons {
+.nav-logo {
+    display: none;
+}
+
+@media (min-width: 1200px) {
+    .nav-logo {
+        display: inline-block;
+    }
+}
+
+.mobile-nav {
     display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    align-items: center;
+    color: white;
+    gap: 1rem;
+    overflow-x: auto;
+    justify-content: space-evenly;
+    flex-grow: 1;
+}
+
+.mobile-nav a {
+    flex-shrink: 0;
+    text-decoration: none;
+    color: inherit;
+}
+
+@media (min-width: 1200px) {
+    .mobile-nav {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .header {
+        grid-area: nav;
+        top: 0 !important;
+    }
+
+    .mobile-nav {
+        display: none;
+    }
+}
+
+.header-buttons {
+    display: none;
     flex-direction: row;
     gap: 3rem;
     font-weight: bold;
     align-items: center;
+}
+
+@media (min-width: 1200px) {
+    .header-buttons {
+        display: flex;
+    }
 }
 
 .header-buttons .header-link {
@@ -75,8 +153,16 @@ html {
 }
 
 .sidebar {
+    display: none;
     grid-area: sidebar;
     flex-shrink: 0;
+}
+
+@media (min-width: 1200px) {
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .sidebar-link {
@@ -206,10 +292,16 @@ html {
     background-color: #2F374B42;
     padding: 60px 40px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     border-radius: 50px;
     align-items: center;
     gap: 2rem;
+}
+
+@media (min-width: 1200px) {
+    .home-search-form {
+        flex-direction: row;
+    }
 }
 
 .home-search-form-input-group {
@@ -221,8 +313,16 @@ html {
     color: black;
     height: 72px;
     display: inline-grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 50px 50px;
+    width: 100%;
+}
+
+@media (min-width: 1200px) {
+    .home-search-form-input-group {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
 }
 
 .home-search-form-input-group input {
@@ -255,13 +355,22 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .home-what-to-do-cards {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
     gap: 4rem;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 1200px) {
+    .home-what-to-do-cards {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
 }
 
 .home-what-to-do-card {
@@ -309,10 +418,19 @@ html {
 
 .home-details-explore-with-us {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
     gap: 4rem;
     place-items: center;
+}
+
+@media (min-width: 1200px) {
+    .home-details-explore-with-us {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        place-items: center;
+    }
+
 }
 
 .home-details-explore-with-us-card {
@@ -392,8 +510,14 @@ html {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     gap: 1rem;
+}
+
+@media (min-width: 1200px) {
+    .home-popular-cities {
+        justify-content: space-between;
+    }
 }
 
 .home-popular-cities .popular-city-card {
@@ -434,7 +558,16 @@ html {
     border-radius: 16px;
     padding: 2.2rem;
     display: grid;
-    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto 1fr;
+}
+
+@media (min-width: 1200px) {
+    .home-subscribe-container {
+        grid-template-rows: 1fr;
+        grid-template-columns: 2fr 1fr 2fr;
+    }
+
 }
 
 .home-subscribe-container .bubble {

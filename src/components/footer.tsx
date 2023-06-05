@@ -8,7 +8,7 @@ import pinterest from "~/assets/pinterest.svg";
 export const Footer = () => {
   return (
     <footer className="footer">
-      <div className="container-md d-flex align-items-center">
+      <div className="container-md d-flex align-items-center flex-lg-row  flex-column  py-4 gap-4">
         <div
           className="d-flex flex-column align-items-center"
           style={{ width: "fit-content" }}
