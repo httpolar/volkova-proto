@@ -9,6 +9,9 @@ import hotels from "~/assets/hotels.jpg";
 import apartaments from "~/assets/apartaments.jpg";
 import resort from "~/assets/resort.jpg";
 import villa from "~/assets/villa.jpg";
+import turkey from "~/assets/turkey.jpg";
+import uae from "~/assets/uae.jpg";
+import armenia from "~/assets/armenia.jpg";
 
 export default function HomeView() {
   return (
@@ -135,6 +138,54 @@ export default function HomeView() {
             <div className="home-accommodation-card">
               <img src={villa} />
               <h4>Виллы</h4>
+            </div>
+          </div>
+
+          <div className="home-details-section-heading ">
+            <h3>Популярные города</h3>
+            <p>Самые популярные города, по мнению наших пользователей</p>
+          </div>
+
+          <div className="home-popular-cities">
+            <div
+              className="popular-city-card"
+              style={{ backgroundImage: `url(${turkey})` }}
+            >
+              <div className="bubble">Турция</div>
+              <div className="flex-grow-1" />
+              <h3>Стамбул</h3>
+            </div>
+
+            <div
+              className="popular-city-card"
+              style={{ backgroundImage: `url(${uae})` }}
+            >
+              <div className="bubble">ОАЭ</div>
+              <div className="flex-grow-1" />
+              <h3>Дубай</h3>
+            </div>
+
+            <div
+              className="popular-city-card"
+              style={{ backgroundImage: `url(${armenia})` }}
+            >
+              <div className="bubble">Армения</div>
+              <div className="flex-grow-1" />
+              <h3>Ереван</h3>
+            </div>
+          </div>
+
+          <div className="mt-5 home-subscribe-container">
+            <div className="bubble">
+              <h5>Узнавай обо всем первый</h5>
+              <p>Подпишитесь, и мы вышлем вам лучшие предложения</p>
+            </div>
+            <div/>
+            <div className="input-container">
+              <div className="input-group">
+                <input placeholder="Укажите e-mail" type="text"/>
+                <button>Подписаться</button>
+              </div>
             </div>
           </div>
         </div>
