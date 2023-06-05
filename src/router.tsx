@@ -4,6 +4,7 @@ import Root from "~/root.tsx";
 import SupportView from "~/routes/support.tsx";
 import ReservationsView from "~/routes/reservations.tsx";
 import HomeView from "~/routes/home.tsx";
+import SettingsView from "~/routes/settings.tsx";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: "reservations",
         element: <ReservationsView />,
+      },
+      {
+        path: "settings",
+        element: <SettingsView />,
       },
     ],
   },
