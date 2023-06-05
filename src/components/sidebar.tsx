@@ -5,10 +5,13 @@ import {
   HomeIcon,
   SettingsIcon,
 } from "lucide-react";
+import { ComponentPropsWithRef, FC } from "react";
 
-export const SideBar = () => {
+type SidebarProps = ComponentPropsWithRef<"aside">;
+
+export const SideBar: FC<SidebarProps> = ({ className, ...props }) => {
   return (
-    <aside className="sidebar">
+    <aside className={"sidebar " + className} {...props}>
       <div className="d-flex flex-column gap-2">
         <NavLink className="sidebar-link" to="/">
           <HomeIcon />

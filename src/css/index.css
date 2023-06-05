@@ -26,12 +26,17 @@ html {
 .header {
     grid-area: header;
     height: var(--header-height);
+    position: sticky;
+    z-index: 50;
+    top: 0;
+    background-color: rgba(18, 30, 46, 0.8);
+    backdrop-filter: blur(10px);
 }
 
 .header-buttons {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: 3rem;
     font-weight: bold;
     align-items: center;
 }
@@ -92,7 +97,6 @@ html {
 
 .main {
     grid-area: main;
-    padding: 2rem;
     display: flex;
     flex-direction: row;
     min-height: var(--vh-100-minus-header);
@@ -194,4 +198,191 @@ html {
     padding: 1rem 2rem;
     font-weight: bold;
     color: white;
+}
+
+.home-search-form {
+    width: 100%;
+    background-color: #2F374B42;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 50px;
+    align-items: center;
+    gap: 2rem;
+}
+
+.home-search-form-input-group {
+    flex: 1;
+    border-radius: 4px;
+    border-style: none;
+    border-width: 0;
+    background-color: white;
+    color: black;
+    height: 72px;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.home-search-form-input-group input {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-width: 0;
+    border-style: none;
+}
+
+.home-search-form-input-group input + input {
+    border-left: solid 1px rgba(0, 0, 0, 0.2);
+}
+
+.home-search-form button[type=submit] {
+    height: fit-content;
+    background-color: #FAB33F;
+    color: white;
+    border-width: 0;
+    border-style: none;
+    border-radius: 4px;
+    font-weight: bold;
+    padding: 1rem 3rem;
+}
+
+.home-what-to-do {
+    min-height: 100vh;
+    width: 100%;
+    background: rgb(19, 29, 40);
+    background: linear-gradient(180deg, rgba(19, 29, 40, 1) 0%, rgba(69, 114, 173, 1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-what-to-do-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 4rem;
+}
+
+.home-what-to-do-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2.5rem;
+    color: #794C08;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.home-what-to-do-card figure {
+    max-width: 90px;
+    min-height: 90px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 20px 80px -15px rgba(45, 51, 60, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-what-to-do-card img {
+    max-width: 50px;
+    max-height: 50px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.home-what-to-do-card :is(h1,h2,h3,h4,h5,h6) {
+    font-weight: bold;
+    font-size: 1.5rem;
+
+}
+
+.home-details {
+    background-color: #EFEFEF;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.home-details-explore-with-us {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 4rem;
+    place-items: center;
+}
+
+.home-details-explore-with-us-card {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+}
+
+.home-details-explore-with-us-card img {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+.home-details-explore-with-us-card-body {
+    padding: 1.5rem 3rem;
+}
+
+.home-details-explore-with-us-card-description {
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.home-details-section-heading {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.home-details-section-heading :is(h1,h2,h3,h4,h5,h6) {
+    font-weight: bold;
+    font-size: 45px;
+}
+
+.home-details-section-heading p {
+    color: #5C6272;
+    font-size: 1rem;
+}
+
+.home-accommodation-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+.home-accommodation-card {
+    background-color: #E6E6E6;
+    border-radius: 12px;
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.home-accommodation-card img {
+    border-radius: 12px;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    object-fit: cover;
+}
+
+.home-accommodation-card :is(h1,h2,h3,h4,h5,h6) {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-top: 1rem;
 }

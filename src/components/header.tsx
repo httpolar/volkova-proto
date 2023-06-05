@@ -8,7 +8,6 @@ export const Header = () => {
         <Logo />
         <div className="flex-grow-1" />
         <div className="header-buttons">
-          <button className="sign-out-btn">Выйти</button>
           <Link className="header-link" to="/language">
             Язык
           </Link>
