@@ -21,9 +21,9 @@ export const SideBar: FC<SidebarProps> = ({ className, ...props }) => {
           <SettingsIcon />
           <span>Настройки</span>
         </NavLink>
-        <NavLink className="sidebar-link" to="/new-object">
+        <NavLink className="sidebar-link" to="/reservations">
           <ContactIcon />
-          <span>Разместить объект</span>
+          <span>Мои бронирования</span>
         </NavLink>
         <NavLink className="sidebar-link" to="/support">
           <HelpCircleIcon />

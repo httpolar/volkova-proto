@@ -3,7 +3,7 @@ import { SideBar } from "~/components/sidebar.tsx";
 import lesnoydom from "~/assets/lesnoydom.png";
 import { EditIcon } from "lucide-react";
 
-export default function NewObjectView() {
+export default function ReservationsView() {
   return (
     <main className="main text-white">
       <div className="mx-auto container-md d-flex p-0 gap-4">
